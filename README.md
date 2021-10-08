@@ -23,7 +23,7 @@
   <img alt="Demo Gif" src="https://user-images.githubusercontent.com/45832621/136554244-56bf935f-39a0-4760-881c-b58417b7c9e4.gif"/>
 </div>
 
-## 🗂️ Packages used in this project                    
+## 🗂️ Packages used in this project
 
 | Package (Frontend)      | Version |
 | ----------------------- | ------- |
@@ -38,16 +38,13 @@
 | react-file-base64       | ^1.0.3  |
 | react-hook-form         | ^6.13.1 |
 | react-redux             | ^7.2.2  |
-| react-select            | ^1.8.4  |
 | react-toastify          | ^5.1.0  |
-| redux                   | ^4.0.5  | 
-| redux-thunk             | ^2.3.0  | 
+| redux                   | ^4.0.5  |
+| redux-thunk             | ^2.3.0  |
 
-
-| Package (Backend)       | Version |
-| ----------------------- | ------- |
-| cors                    | ^2.8.5  |
-| dotenv                  | ^10.0.0 |
-| express                 | ^4.17.1 |
-| mongoose                | ^6.0.9  |
-
+| Package (Backend) | Version |
+| ----------------- | ------- |
+| cors              | ^2.8.5  |
+| dotenv            | ^10.0.0 |
+| express           | ^4.17.1 |
+| mongoose          | ^6.0.9  |
