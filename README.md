@@ -23,6 +23,10 @@
   <img alt="Demo Gif" src="https://user-images.githubusercontent.com/45832621/136554244-56bf935f-39a0-4760-881c-b58417b7c9e4.gif"/>
 </div>
 
+<div align="center">
+  <img alt="Demo Add" src="https://user-images.githubusercontent.com/45832621/136581170-7814c3fc-5bc4-45fe-be42-2819949f8f9f.gif"/>
+</div>
+
 ## 🗂️ Packages used in this project
 
 | Package (Frontend)      | Version |
