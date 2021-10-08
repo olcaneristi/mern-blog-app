@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_ENDPOINT = 'https://mern-blog-backend1.herokuapp.com/posts';
+const API_ENDPOINT = 'YOUR_API_ENDPOINT';
 
 export const fetchPosts = async () => {
   return await axios.get(API_ENDPOINT);
