@@ -53,7 +53,7 @@ const Post = ({ post }) => {
             <Flex alignItems="center" justify="between">
               <Image h={10} fit="cover" rounded="full" src="https://source.unsplash.com/random/48x48" alt="Avatar" />
               <Link mx={2} fontWeight="bold" color={useColorModeValue('gray.700', 'gray.200')}>
-                Ogulcan Eristi
+                {post.author}
               </Link>
             </Flex>
             <Spacer />
