@@ -12,32 +12,15 @@ import {
   ModalBody,
   ModalCloseButton,
   Textarea,
+  Select,
 } from '@chakra-ui/react';
 import { Button } from '@chakra-ui/button';
 import { Input } from '@chakra-ui/input';
 import { FormControl, FormLabel } from '@chakra-ui/form-control';
-import Select from 'react-select';
 
 import { createPost } from '../redux/actions/post';
 
-const tags = [
-  {
-    value: 'fun',
-    label: 'Fun',
-  },
-  {
-    value: 'programming',
-    label: 'Programming',
-  },
-  {
-    value: 'health',
-    label: 'Health',
-  },
-  {
-    value: 'science',
-    label: 'Science',
-  },
-];
+const categories = ['Frontend', 'Backend', 'Mobile', 'React', 'Vue', 'JavaScript', 'Fun', 'Gaming'];
 
 const AddPostForm = ({ isOpen, onClose }) => {
   const [file, setFile] = useState(null);
@@ -104,15 +87,20 @@ const AddPostForm = ({ isOpen, onClose }) => {
             <FormControl minH={'100px'}>
               <FormLabel>Category</FormLabel>
               <Controller
-                as={Select}
-                options={tags}
-                name="tags"
-                noOptionsMessage={() => 'Category not found!'}
+                as={
+                  <Select placeholder="Choose Category">
+                    {categories.map((category, i) => (
+                      <option key={i} value={category}>
+                        {category}
+                      </option>
+                    ))}
+                  </Select>
+                }
+                name="tag"
                 control={control}
-                defaultValue={tags[0]}
+                defaultValue={categories[0]}
               />
             </FormControl>
-
             <FormControl isInvalid={errors.content} minH={'100px'}>
               <FormLabel>Content</FormLabel>
               <Textarea

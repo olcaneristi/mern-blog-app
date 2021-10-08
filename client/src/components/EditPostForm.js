@@ -4,30 +4,12 @@ import { useDispatch } from 'react-redux';
 import { toast } from 'react-toastify';
 import { useForm, Controller } from 'react-hook-form';
 import { updatePost } from '../redux/actions/post';
-import Select from 'react-select';
-import { Textarea, Box, Flex, Heading } from '@chakra-ui/react';
+import { Textarea, Box, Flex, Heading, Select } from '@chakra-ui/react';
 import { FormControl, FormLabel } from '@chakra-ui/form-control';
 import { Button } from '@chakra-ui/button';
 import { Input } from '@chakra-ui/input';
 
-const tags = [
-  {
-    value: 'fun',
-    label: 'Fun',
-  },
-  {
-    value: 'programming',
-    label: 'Programming',
-  },
-  {
-    value: 'health',
-    label: 'Health',
-  },
-  {
-    value: 'science',
-    label: 'Science',
-  },
-];
+const categories = ['Frontend', 'Backend', 'Mobile', 'React', 'Vue', 'JavaScript', 'Fun', 'Gaming'];
 
 const EditPostForm = ({ post, closeEditMode }) => {
   const [file, setFile] = useState(post?.image);
@@ -95,10 +77,16 @@ const EditPostForm = ({ post, closeEditMode }) => {
             <FormControl minH={'100px'}>
               <FormLabel>Category</FormLabel>
               <Controller
-                as={Select}
-                options={tags}
-                name="tags"
-                noOptionsMessage={() => 'Category not found!'}
+                as={
+                  <Select placeholder="Choose Category">
+                    {categories.map((category, i) => (
+                      <option key={i} value={category}>
+                        {category}
+                      </option>
+                    ))}
+                  </Select>
+                }
+                name="tag"
                 control={control}
                 defaultValue={post?.tag}
               />
