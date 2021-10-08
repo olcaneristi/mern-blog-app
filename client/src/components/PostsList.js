@@ -30,8 +30,7 @@ const PostsList = () => {
         {error && <p>{error}</p>}
         {loading ? (
           <Loader />
-        ) : (
-          posts &&
+        ) : posts?.length > 0 ? (
           posts?.map(post => (
             <Box
               mx="auto"
@@ -45,6 +44,8 @@ const PostsList = () => {
               <Post post={post} />
             </Box>
           ))
+        ) : (
+          'Blog not found!'
         )}
       </Wrap>
     </Flex>
