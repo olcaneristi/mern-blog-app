@@ -83,6 +83,22 @@ const AddPostForm = ({ isOpen, onClose }) => {
               />
               {errors.subtitle && <p className="validation__error">{errors.subtitle.message}</p>}
             </FormControl>
+			
+			<FormControl isInvalid={errors.author} minH={'100px'}>
+              <FormLabel>Author</FormLabel>
+              <Input
+                id="author"
+                label="Author"
+                name="author"
+                ref={register({
+                  required: {
+                    value: true,
+                    message: 'This field is required.',
+                  },
+                })}
+              />
+              {errors.author && <p className="validation__error">{errors.author.message}</p>}
+            </FormControl>
 
             <FormControl minH={'100px'}>
               <FormLabel>Category</FormLabel>
