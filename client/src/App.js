@@ -3,9 +3,9 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 import PostsList from './components/PostsList';
-/* import AddPostForm from './components/AddPostForm';*/
 import PostDetails from './components/PostDetails';
 import Header from './components/Header';
+import Home from './components/Home';
 
 function App() {
   return (
@@ -14,9 +14,10 @@ function App() {
       <Router>
         <Header />
         <Switch>
+          <Route exact path="/" component={Home} />
           <Route exact path="/posts" component={PostsList} />
           <Route exact path="/posts/:id" component={PostDetails} />
-          <Redirect from="/" to="/posts" />
+          <Redirect to="/" />
         </Switch>
       </Router>
     </>
