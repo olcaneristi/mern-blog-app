@@ -1,0 +1,36 @@
+.loader {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.validation__error {
+  opacity: 0;
+  font-size: 0.75rem;
+  color: lightpink;
+  animation: errorAlert 300ms ease forwards;
+  padding-top: 0.2rem;
+  white-space: pre-line;
+  clear: both;
+}
+
+#react-select-2-listbox {
+  color: #2c313a;
+}
+
+.css-hdd9l7 {
+  background: rgb(0 0 0 / 72%) !important;
+}
+
+@keyframes errorAlert {
+  0% {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
