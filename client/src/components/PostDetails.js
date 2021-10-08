@@ -87,7 +87,7 @@ const PostDetails = () => {
                         />
                         <Flex align="flex-start" direction="column">
                           <Link mx={3} fontWeight="bold" color={('blue.600', 'brand.200')}>
-                            Ogulcan Eristi
+                            {currentPost?.author}
                           </Link>
                           <chakra.span mx={3} fontSize="sm" color={('gray.600', 'whiteAlpha.600')}>
                             {convertRelativeTime(currentPost?.createdAt)}
